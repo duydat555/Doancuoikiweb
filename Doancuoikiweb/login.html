@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Login Form | CodingNepal</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form id="loginForm" action="#login">
+      <h2>Đăng nhập</h2>
+      <div class="input-field">
+        <input type="text" required>
+        <label>nhập email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required>
+        <label>nhập mật khẩu</label>
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Ghi nhớ mật khẩu</p>
+        </label>
+        <a href="#">Quên mật khẩu?</a>
+      </div>
+      <button type="submit">Đăng nhập</button>
+      <div class="register">
+        <p>Bạn chưa có tài khoản? <a href="#" id="showRegisterForm">Đăng kí</a></p>
+      </div>
+    </form>
+    <form id="registerForm" action="#register" style="display: none;">
+      <h2>Đăng ký</h2>
+      <div class="input-field">
+        <input type="text" required>
+        <label>nhập tên</label>
+      </div>
+      <div class="input-field">
+        <input type="text" required>
+        <label>nhập email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required>
+        <label>nhập mật khẩu</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required>
+        <label>nhập lại mật khẩu</label>
+      </div>
+      <button type="submit">Đăng ký</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('showRegisterForm').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('registerForm').style.display = 'block';
+    });
+  </script>
+</body> 
+</html>

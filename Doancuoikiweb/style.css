@@ -54,7 +54,12 @@
     color: var(--dark-color);
     line-height: 1.6;
    }
-
+   #login {
+      a {
+         color: unset;
+         background-color: unset;
+      }
+   }
    h1,h2,h3,p,ul{
     margin:0;
    }
@@ -134,6 +139,7 @@
          background-color: var(--white-color );
          transition: .5s;
       }
+
       .nav_logo {
          margin-left: -150px;
       }
@@ -719,6 +725,12 @@
   .np  {
       margin-left: 45px;
    } */
+   .nav_list {
+      a {
+         margin-left: -15px;
+      }
+   }
+   
    .featured_container {
       grid-template-columns: repeat(3, 1fr);
       column-gap: 0px;
@@ -1246,6 +1258,10 @@
    
 } 
 @media screen and (min-width:1366px){
+  .toggle {
+   width: 37px;
+   height: 10px;
+  }
    .featured_container {
       grid-template-columns: repeat(4, 1fr); 
    }
@@ -1297,7 +1313,7 @@
    &::before {
      position: absolute;
      top: 1px;
-     left: 1px;
+     left: 4px;
      content: "";
      height: calc(100% - 2px);
      aspect-ratio: 1;
